@@ -14,7 +14,7 @@ const modules = [
     id: 'basin-health-overview',
     srcFolder: 'biosentinel_basin_health_intelligence',
     outFile: 'overview.html',
-    title: 'NMCG | Basin Health Intelligence & National River Telemetry - Namami Gange',
+    title: 'BioSentinel | Basin Health Intelligence & National River Telemetry',
     navLabel: 'Basin Overview',
     icon: 'water_drop',
     badge: 'Real-time BHI'
@@ -23,7 +23,7 @@ const modules = [
     id: 'live-gis-telemetry',
     srcFolder: 'biosentinel_live_gis_sensor_grid',
     outFile: 'gis.html',
-    title: 'NMCG | Live GIS & Telemetry Sensor Grid - Namami Gange',
+    title: 'BioSentinel | Live GIS & Telemetry Sensor Grid',
     navLabel: 'Live GIS Grid',
     icon: 'explore',
     badge: 'GSAT Spectral'
@@ -32,7 +32,7 @@ const modules = [
     id: 'ai-bio-alerts',
     srcFolder: 'biosentinel_ai_bio_alerts_intelligence_1',
     outFile: 'alerts.html',
-    title: 'NMCG | AI Bio-Alerts & Autonomous Incident Triage - Namami Gange',
+    title: 'BioSentinel | AI Bio-Alerts & Autonomous Incident Triage',
     navLabel: 'AI Bio-Alerts',
     icon: 'crisis_alert',
     badge: 'Neural Triage'
@@ -41,7 +41,7 @@ const modules = [
     id: 'species-fauna-register',
     srcFolder: 'biosentinel_biodiversity_species_register',
     outFile: 'fauna.html',
-    title: 'NMCG | Biodiversity & Species Fauna Register - Namami Gange',
+    title: 'BioSentinel | Biodiversity & Species Fauna Register',
     navLabel: 'Fauna Register',
     icon: 'flutter',
     badge: 'WII Database'
@@ -50,7 +50,7 @@ const modules = [
     id: 'citizen-sentinel-portal',
     srcFolder: 'biosentinel_citizen_sentinel_field_network',
     outFile: 'sentinel.html',
-    title: 'NMCG | Citizen Sentinel Field Network (Ganga Prahari) - Namami Gange',
+    title: 'BioSentinel | Citizen Sentinel Field Network (Ganga Prahari)',
     navLabel: 'Ganga Prahari',
     icon: 'shield_person',
     badge: 'Field Network'
@@ -76,35 +76,24 @@ function generateGovHeader(activeId) {
   }).join('');
 
   return `
-<!-- ================= GOVERNMENT OF INDIA / NMCG OFFICIAL HEADER ================= -->
+<!-- ================= BIOSENTINEL ENVIRONMENTAL INTELLIGENCE PORTAL HEADER ================= -->
 <header class="w-full bg-white shadow-sm">
   <!-- 1. National Tricolor Strip -->
   <div class="national-tricolor-ribbon"></div>
 
-  <!-- 2. Accessibility & Citizen Utility Bar (As on nmcg.nic.in) -->
+  <!-- 2. Accessibility & Utility Bar -->
   <div class="gov-top-utility-bar">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-      <!-- Left: Date & Social Connections -->
       <div class="flex items-center gap-3">
         <span class="inline-flex items-center gap-1 font-semibold text-slate-700">
           <span class="material-symbols-outlined text-[15px] text-[#026725]">today</span>
           <span>${currentDate}</span>
         </span>
         <span class="text-slate-300">|</span>
-        <div class="hidden sm:inline-flex items-center gap-2">
-          <a href="https://www.facebook.com/cleanganganmcg/" target="_blank" rel="noopener noreferrer" title="Follow on Facebook" class="font-bold text-[#006699] hover:underline">FB</a>
-          <span class="text-slate-300">·</span>
-          <a href="https://twitter.com/cleanganganmcg" target="_blank" rel="noopener noreferrer" title="Follow on Twitter / X" class="font-bold text-[#006699] hover:underline">TW</a>
-          <span class="text-slate-300">·</span>
-          <a href="https://www.youtube.com/channel/UCdslrfFfeUDBQHNPDK6q8YQ" target="_blank" rel="noopener noreferrer" title="Subscribe on YouTube" class="font-bold text-[#006699] hover:underline">YT</a>
-        </div>
-        <span class="hidden md:inline text-slate-300">|</span>
         <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" class="hidden md:inline font-bold text-[#026725] hover:underline">
           भारत सरकार | Government of India
         </a>
       </div>
-
-      <!-- Right: Accessibility Controls & Key Portals -->
       <div class="flex items-center gap-2">
         <div class="flex items-center gap-1 border-r border-slate-300 pr-2">
           <button onclick="decreaseFontSize()" class="gov-font-btn" title="Decrease Font Size" aria-label="Decrease Font Size">A-</button>
@@ -119,39 +108,36 @@ function generateGovHeader(activeId) {
         <span class="text-slate-300 hidden sm:inline">|</span>
         <a href="sentinel.html" class="font-semibold text-slate-700 hover:text-[#026725]">Grievance</a>
         <span class="text-slate-300">|</span>
-        <a href="https://nmcg.nic.in/rtidetails.aspx" target="_blank" class="font-semibold text-slate-700 hover:text-[#026725]">RTI</a>
-        <span class="text-slate-300">|</span>
         <span class="font-bold text-[#026725] cursor-pointer hover:underline" onclick="alert('Hindi language locale enabled across all telemetry grids.')">हिन्दी</span>
       </div>
     </div>
   </div>
 
-  <!-- 3. Main Government Emblem & Ministry Identity Header -->
+  <!-- 3. BioSentinel Identity Header -->
   <div class="gov-identity-header">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <!-- Left: Ashoka Lion Emblem + Bilingual Ministry Titles -->
       <div class="flex items-center gap-3 sm:gap-4 text-left">
-        <a href="overview.html" class="shrink-0" title="National Portal Home">
-          <img src="national_emblem.svg" alt="State Emblem of India" class="h-16 sm:h-20 w-auto object-contain drop-shadow-sm" />
+        <a href="overview.html" class="shrink-0" title="BioSentinel Portal Home">
+          <img src="emblem.svg" alt="BioSentinel Emblem" class="h-14 sm:h-16 w-auto object-contain drop-shadow-sm" />
         </a>
         <div class="flex flex-col justify-center">
-          <span class="text-xs sm:text-sm font-bold text-slate-800 tracking-wide font-serif">राष्ट्रीय स्वच्छ गंगा मिशन</span>
-          <h1 class="text-lg sm:text-xl md:text-2xl font-black text-[#006699] tracking-tight uppercase leading-tight font-serif">
-            National Mission for Clean Ganga (NMCG)
-          </h1>
-          <p class="text-[11px] sm:text-xs text-slate-700 font-medium leading-tight">
-            जल संसाधन, नदी विकास और गंगा संरक्षण विभाग • जल शक्ति मंत्रालय, भारत सरकार
+          <div class="flex items-center gap-2">
+            <h1 class="text-xl sm:text-2xl md:text-3xl font-black text-[#006699] tracking-tight uppercase leading-tight">
+              BioSentinel
+            </h1>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-[#e8f5e9] text-[#026725] border border-[#026725]/20 uppercase tracking-widest">GOV-IN</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-700 font-semibold leading-tight">
+            National AI-Powered Riverine Biodiversity, Habitat &amp; Environmental Intelligence Platform
           </p>
           <p class="text-[10px] sm:text-[11px] text-slate-500 font-normal">
-            Department of Water Resources, River Development &amp; Ganga Rejuvenation, Ministry of Jal Shakti, Govt. of India
+            Under NMCG / CPCB / WII Framework • Ministry of Jal Shakti, Government of India
           </p>
         </div>
       </div>
 
-      <!-- Right: Namami Gange Vector Brand + Telemetry Grid Badge -->
       <div class="flex items-center gap-3 sm:gap-4 shrink-0">
-        <img src="namami_gange_logo.svg" alt="Namami Gange Official Identity" class="h-12 sm:h-14 w-auto object-contain" />
-        <div class="hidden lg:flex flex-col text-right pl-3 border-l-2 border-emerald-600">
+        <div class="flex flex-col text-right pl-3 border-l-2 border-emerald-600">
           <span class="text-[10px] font-mono font-bold tracking-widest text-emerald-800 uppercase">AI Bio-Spatial Grid</span>
           <span class="text-xs font-bold text-[#006699]">CPCB-WII Protocol SEC-4</span>
           <span class="inline-flex items-center justify-end gap-1.5 text-[11px] text-emerald-700 font-semibold mt-0.5">
@@ -163,8 +149,8 @@ function generateGovHeader(activeId) {
     </div>
   </div>
 
-  <!-- 4. Primary Government Navigation Bar -->
-  <nav class="gov-main-navbar" aria-label="Main Government Navigation">
+  <!-- 4. Primary Navigation Bar -->
+  <nav class="gov-main-navbar" aria-label="Main Navigation">
     <div class="max-w-7xl mx-auto flex items-center justify-between overflow-x-auto no-scrollbar">
       <div class="flex items-center">
         ${navLinksHtml}
@@ -177,51 +163,51 @@ function generateGovHeader(activeId) {
     </div>
   </nav>
 
-  <!-- 5. Marquee / Official Notification Ticker (As on nmcg.nic.in) -->
+  <!-- 5. Live Bulletin Ticker -->
   <div class="gov-ticker-container">
     <div class="gov-ticker-label">
       <span class="material-symbols-outlined text-[15px]">campaign</span>
-      <span>NMCG BULLETIN</span>
+      <span>BIOSENTINEL LIVE</span>
     </div>
     <div class="gov-ticker-content">
       <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
-        ★ Autonomous Telemetry Buoy Node #482 synchronized across Rishikesh, Kanpur, Varanasi, Patna and Gangasagar stretches • Nirmalta Index: 78.4% (Class B+ Bathing Standards) • Real-time continuous bio-monitoring in collaboration with Central Pollution Control Board (CPCB) and Wildlife Institute of India (WII) • Ganga Prahari Field Volunteer Hotline active.
+        ★ Autonomous Telemetry Buoy Node #482 synchronized across Rishikesh, Kanpur, Varanasi, Patna and Gangasagar stretches • Basin Health Index: 78.4% (Class B+ Bathing Standards) • Real-time continuous bio-monitoring under CPCB-NMCG-WII protocol • Ganga Prahari Field Volunteer Hotline active.
       </marquee>
     </div>
   </div>
 </header>
-<!-- ================= END GOVERNMENT HEADER ================= -->
+<!-- ================= END BIOSENTINEL HEADER ================= -->
 `;
 }
 
 // Generate the Official Multi-Column Government Footer
 function generateGovFooter() {
   return `
-<!-- ================= GOVERNMENT OF INDIA / NMCG OFFICIAL FOOTER ================= -->
+<!-- ================= BIOSENTINEL PORTAL FOOTER ================= -->
 <footer class="gov-portal-footer">
   <div class="gov-footer-top">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <!-- Column 1: Ministry Details -->
+      <!-- Column 1: BioSentinel Identity -->
       <div class="gov-footer-col">
         <div class="flex items-center gap-2 mb-3">
-          <img src="national_emblem.svg" class="h-10 w-auto filter brightness-0 invert" alt="National Emblem of India"/>
-          <span class="font-bold text-white text-sm">राष्ट्रीय स्वच्छ गंगा मिशन</span>
+          <img src="emblem.svg" class="h-10 w-auto filter brightness-0 invert" alt="BioSentinel Emblem"/>
+          <span class="font-bold text-white text-sm">BioSentinel Intelligence Grid</span>
         </div>
         <p class="text-xs text-slate-300 leading-relaxed mb-3">
-          <b>National Mission for Clean Ganga (NMCG)</b><br/>
-          Department of Water Resources, River Development &amp; Ganga Rejuvenation<br/>
+          <b>National AI-Powered Riverine Biodiversity &amp; Environmental Intelligence Platform</b><br/>
+          Under NMCG / CPCB / WII Framework<br/>
           Ministry of Jal Shakti, Government of India
         </p>
         <p class="text-[11px] text-slate-400">
-          1st Floor, Major Dhyan Chand National Stadium, India Gate, New Delhi - 110002
+          CPCB-WII Protocol SEC-4 • Autonomous Bio-Spatial Monitoring Division
         </p>
       </div>
 
-      <!-- Column 2: Key Stakeholders & Wings -->
+      <!-- Column 2: Key Stakeholders -->
       <div class="gov-footer-col">
         <h4>Key Stakeholders &amp; Agencies</h4>
         <ul>
-          <li><a href="https://nmcg.nic.in/" target="_blank" rel="noopener noreferrer">Namami Gange Official Portal</a></li>
+          <li><a href="https://nmcg.nic.in/" target="_blank" rel="noopener noreferrer">Namami Gange (NMCG)</a></li>
           <li><a href="https://cpcb.nic.in/" target="_blank" rel="noopener noreferrer">Central Pollution Control Board (CPCB)</a></li>
           <li><a href="https://wii.gov.in/" target="_blank" rel="noopener noreferrer">Wildlife Institute of India (WII)</a></li>
           <li><a href="http://cwc.gov.in/" target="_blank" rel="noopener noreferrer">Central Water Commission (CWC)</a></li>
@@ -229,7 +215,7 @@ function generateGovFooter() {
         </ul>
       </div>
 
-      <!-- Column 3: Telemetry Grid Modules -->
+      <!-- Column 3: BioSentinel Modules -->
       <div class="gov-footer-col">
         <h4>BioSentinel Grid Modules</h4>
         <ul>
@@ -241,7 +227,7 @@ function generateGovFooter() {
         </ul>
       </div>
 
-      <!-- Column 4: Portal Policies & Compliance -->
+      <!-- Column 4: Policies -->
       <div class="gov-footer-col">
         <h4>Portal Policies &amp; Compliance</h4>
         <ul>
@@ -255,14 +241,14 @@ function generateGovFooter() {
     </div>
   </div>
 
-  <!-- Bottom Copyright & Hosting Bar -->
+  <!-- Bottom Bar -->
   <div class="gov-footer-bottom-bar">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left px-4">
       <div>
-        Website Content Managed by <b>National Mission for Clean Ganga (NMCG), Ministry of Jal Shakti, Government of India</b>.
+        <b>BioSentinel</b> — National Environmental Intelligence Portal under <b>NMCG, Ministry of Jal Shakti, Govt. of India</b>
       </div>
       <div class="text-[11px] text-emerald-100">
-        Hosted by <b>National Informatics Centre (NIC)</b> • BioSentinel Grid SEC-4
+        BioSentinel Grid SEC-4 • © 2026 All Rights Reserved
       </div>
     </div>
   </div>
