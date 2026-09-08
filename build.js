@@ -397,16 +397,17 @@ for (const mod of modules) {
 `;
   html = html.replace('</head>', `${govStyles}\n</head>`);
 
-  // 6. Replace the old fixed dark header with the official Government header
+  // 6. Replace the old bottom <nav> BEFORE injecting the gov header
+  //    (the gov header contains its own <nav>, so this must happen first)
+  html = html.replace(/<nav[\s\S]*?<\/nav>/, generateMobileNav(mod.id));
+
+  // 7. Replace the old fixed dark header with the official Government header
   html = html.replace(/<header[\s\S]*?<\/header>/, generateGovHeader(mod.id));
 
-  // 7. Update <main> styling to remove fixed header padding and center container
+  // 8. Update <main> styling to remove fixed header padding and center container
   html = html.replace(/<main class="flex flex-col relative w-full pt-20 pb-28 bg-surface px-margin-mobile flex-1">/g,
     '<main id="main-content" class="flex flex-col relative w-full max-w-7xl mx-auto pt-4 pb-20 px-3 sm:px-6 flex-1">'
   );
-
-  // 8. Replace the old bottom <nav> with the new mobile dock
-  html = html.replace(/<nav[\s\S]*?<\/nav>/, generateMobileNav(mod.id));
 
   // 9. Inject the Official Government Footer right before </body>
   html = html.replace('</body>', `${generateGovFooter()}\n</body>`);
