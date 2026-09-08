@@ -1,0 +1,29 @@
+{
+  "name": "biosentinel-intelligence-portal",
+  "version": "1.0.0",
+  "description": "National AI-Powered Riverine Biodiversity, Habitat & Environmental Intelligence Platform (NMCG / CPCB / WII)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node build.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "biosentinel",
+    "namami-gange",
+    "nmcg",
+    "environmental-intelligence",
+    "gis",
+    "telemetry",
+    "render-deployment"
+  ],
+  "author": "BioSentinel Engineering Team",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "cli": "^1.0.1",
+    "vercel": "^59.11.7"
+  }
+}

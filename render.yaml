@@ -1,0 +1,59 @@
+# Render Infrastructure-as-Code Blueprint
+# https://render.com/docs/blueprint-spec
+
+services:
+  # -------------------------------------------------------------
+  # Primary Service: Web Service (Node.js Engine)
+  # Features: Live /healthz monitor, dynamic mock telemetry APIs,
+  # zero runtime dependencies, graceful process termination.
+  # -------------------------------------------------------------
+  - type: web
+    name: biosentinel-portal
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+
+  # -------------------------------------------------------------
+  # Optional Service: Static Site (Global Edge CDN)
+  # Features: Instant global edge caching, 100% free, zero cold starts.
+  # If you prefer pure static hosting, deploy this service in Render.
+  # -------------------------------------------------------------
+  - type: web
+    name: biosentinel-static
+    runtime: static
+    buildCommand: npm run build
+    staticPublishPath: ./public
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+    routes:
+      - type: rewrite
+        source: /overview
+        destination: /overview.html
+      - type: rewrite
+        source: /gis
+        destination: /gis.html
+      - type: rewrite
+        source: /alerts
+        destination: /alerts.html
+      - type: rewrite
+        source: /fauna
+        destination: /fauna.html
+      - type: rewrite
+        source: /sentinel
+        destination: /sentinel.html
+      - type: rewrite
+        source: /*
+        destination: /index.html
