@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" fill="none">
+  <!-- State Emblem of India (Ashoka Pillar Lion Capital) -->
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#996515"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#855811"/>
+    </linearGradient>
+    <linearGradient id="bronze" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8B6914"/>
+      <stop offset="100%" stop-color="#5C4010"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Top Three Lions Abacus Representation -->
+  <g fill="url(#goldGrad)" stroke="#5C4010" stroke-width="1.2">
+    <!-- Center Lion Head & Mane -->
+    <path d="M100 20 C92 20, 84 28, 84 42 C84 56, 88 66, 92 78 C94 82, 96 86, 100 86 C104 86, 106 82, 108 78 C112 66, 116 56, 116 42 C116 28, 108 20, 100 20 Z" />
+    <circle cx="100" cy="38" r="4" fill="#5C4010"/>
+    <path d="M96 46 Q100 52 104 46" stroke="#5C4010" stroke-width="2" fill="none"/>
+    <!-- Center Lion Mane Locks -->
+    <path d="M84 48 C78 52, 76 64, 82 72 C86 78, 90 82, 92 86" fill="none" stroke="#855811" stroke-width="2"/>
+    <path d="M116 48 C122 52, 124 64, 118 72 C114 78, 110 82, 108 86" fill="none" stroke="#855811" stroke-width="2"/>
+    <path d="M88 32 C82 36, 80 44, 84 50" fill="none" stroke="#855811" stroke-width="2"/>
+    <path d="M112 32 C118 36, 120 44, 116 50" fill="none" stroke="#855811" stroke-width="2"/>
+
+    <!-- Left Lion (Profile) -->
+    <path d="M68 36 C60 38, 54 46, 52 56 C50 68, 54 78, 62 86 C68 88, 74 88, 80 84 C76 76, 74 66, 72 54 C72 44, 70 38, 68 36 Z"/>
+    <circle cx="58" cy="50" r="3" fill="#5C4010"/>
+    <path d="M54 58 Q60 62 64 58" stroke="#5C4010" stroke-width="1.5" fill="none"/>
+
+    <!-- Right Lion (Profile) -->
+    <path d="M132 36 C140 38, 146 46, 148 56 C150 68, 146 78, 138 86 C132 88, 126 88, 120 84 C124 76, 126 66, 128 54 C128 44, 130 38, 132 36 Z"/>
+    <circle cx="142" cy="50" r="3" fill="#5C4010"/>
+    <path d="M136 58 Q140 62 146 58" stroke="#5C4010" stroke-width="1.5" fill="none"/>
+
+    <!-- Chest and Torso Foundation -->
+    <path d="M72 84 C72 108, 78 126, 82 136 L118 136 C122 126, 128 108, 128 84 Z"/>
+    <path d="M84 94 Q100 100 116 94" fill="none" stroke="#855811" stroke-width="2"/>
+    <path d="M82 108 Q100 114 118 108" fill="none" stroke="#855811" stroke-width="2"/>
+    <path d="M84 122 Q100 128 116 122" fill="none" stroke="#855811" stroke-width="2"/>
+
+    <!-- Left Leg/Paw -->
+    <path d="M60 88 C56 102, 58 122, 64 136 L76 136 C72 124, 70 106, 72 88 Z"/>
+    <!-- Right Leg/Paw -->
+    <path d="M140 88 C144 102, 142 122, 136 136 L124 136 C128 124, 130 106, 128 88 Z"/>
+  </g>
+
+  <!-- Abacus Platform -->
+  <rect x="36" y="136" width="128" height="14" rx="3" fill="url(#bronze)" stroke="#3A2807" stroke-width="1.5"/>
+
+  <!-- Ashoka Chakra on Abacus -->
+  <g transform="translate(100, 164)">
+    <circle cx="0" cy="0" r="14" fill="#FFFFFF" stroke="#000080" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="2.5" fill="#000080"/>
+    <!-- 24 Spokes (rendered with 12 symmetric diametral lines) -->
+    <g stroke="#000080" stroke-width="1">
+      <line x1="0" y1="-14" x2="0" y2="14"/>
+      <line x1="-14" y1="0" x2="14" y2="0"/>
+      <line x1="-9.9" y1="-9.9" x2="9.9" y2="9.9"/>
+      <line x1="9.9" y1="-9.9" x2="-9.9" y2="9.9"/>
+      <line x1="-13" y1="-5.2" x2="13" y2="5.2"/>
+      <line x1="-13" y1="5.2" x2="13" y2="-5.2"/>
+      <line x1="-5.2" y1="-13" x2="5.2" y2="13"/>
+      <line x1="5.2" y1="-13" x2="-5.2" y2="13"/>
+      <line x1="-12" y1="-7.2" x2="12" y2="7.2"/>
+      <line x1="-12" y1="7.2" x2="12" y2="-7.2"/>
+      <line x1="-7.2" y1="-12" x2="7.2" y2="12"/>
+      <line x1="7.2" y1="-12" x2="-7.2" y2="12"/>
+    </g>
+  </g>
+
+  <!-- Flanking Bull (Right) & Galloping Horse (Left) Silhouettes -->
+  <g fill="url(#goldGrad)" stroke="#5C4010" stroke-width="1">
+    <!-- Horse (Left) -->
+    <path d="M52 168 C48 162, 44 158, 48 152 C52 148, 58 150, 62 154 C66 158, 64 164, 62 170 C58 174, 52 174, 52 168 Z"/>
+    <!-- Bull (Right) -->
+    <path d="M148 168 C152 162, 156 158, 152 152 C148 148, 142 150, 138 154 C134 158, 136 164, 138 170 C142 174, 148 174, 148 168 Z"/>
+  </g>
+
+  <!-- Lower Base Plinth -->
+  <rect x="28" y="180" width="144" height="12" rx="2" fill="url(#bronze)" stroke="#3A2807" stroke-width="1.5"/>
+  <rect x="20" y="192" width="160" height="14" rx="2" fill="url(#goldGrad)" stroke="#5C4010" stroke-width="1.5"/>
+
+  <!-- Inverted Lotus Bell Representation -->
+  <path d="M30 206 C40 216, 70 224, 100 224 C130 224, 160 216, 170 206 L164 214 C140 228, 60 228, 36 214 Z" fill="url(#bronze)"/>
+
+  <!-- National Motto: सत्यमेव जयते (Satyameva Jayate) in Devanagari -->
+  <text x="100" y="254" font-family="'Noto Sans Devanagari', 'Yatra One', 'Arial Unicode MS', sans-serif" font-size="20" font-weight="bold" fill="#1F2937" text-anchor="middle" letter-spacing="2">सत्यमेव जयते</text>
+  <text x="100" y="272" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#4B5563" text-anchor="middle" letter-spacing="1.5">SATYAMEVA JAYATE</text>
+</svg>

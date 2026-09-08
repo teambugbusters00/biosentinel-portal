@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" fill="none">
+  <!-- Namami Gange Brand Identity Vector -->
+  <defs>
+    <linearGradient id="gangaBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006699"/>
+      <stop offset="100%" stop-color="#00A2E8"/>
+    </linearGradient>
+    <linearGradient id="gangaGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#026725"/>
+      <stop offset="100%" stop-color="#138808"/>
+    </linearGradient>
+    <linearGradient id="gangaSaffron" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9933"/>
+      <stop offset="100%" stop-color="#FF6600"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left River Drop Icon -->
+  <g transform="translate(10, 5)">
+    <!-- Outer Shield / Circle -->
+    <circle cx="28" cy="28" r="28" fill="#F0FDF4" stroke="#026725" stroke-width="1.5"/>
+    <!-- Sacred Wave Shapes (Tricolor) -->
+    <path d="M12 28 C18 20, 24 36, 32 26 C38 18, 44 26, 46 22" fill="none" stroke="url(#gangaSaffron)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M10 34 C16 26, 24 40, 32 32 C38 24, 44 32, 46 28" fill="none" stroke="url(#gangaBlue)" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M12 40 C18 34, 26 44, 34 38 C40 32, 44 38, 46 34" fill="none" stroke="url(#gangaGreen)" stroke-width="3" stroke-linecap="round"/>
+    <!-- Water drop droplet on top -->
+    <path d="M28 10 C28 10, 22 18, 22 21 C22 24.3, 24.7 27, 28 27 C31.3 27, 34 24.3, 34 21 C34 18, 28 10, 28 10 Z" fill="#006699"/>
+    <circle cx="27" cy="19" r="1.2" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Hindi & English Official Branding Typography -->
+  <g transform="translate(74, 12)">
+    <text x="0" y="18" font-family="'Noto Sans Devanagari', 'Arial Unicode MS', sans-serif" font-size="20" font-weight="800" fill="#026725" letter-spacing="0.5">नमामि गंगे</text>
+    <text x="0" y="34" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="14" font-weight="800" fill="#006699" letter-spacing="1">NAMAMI GANGE</text>
+    <text x="0" y="46" font-family="'Inter', sans-serif" font-size="8.5" font-weight="600" fill="#64748B" letter-spacing="0.5">NATIONAL MISSION FOR CLEAN GANGA</text>
+  </g>
+</svg>
