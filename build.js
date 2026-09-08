@@ -44,14 +44,14 @@ const modules = [
     title: 'BioSentinel | Biodiversity & Species Fauna Register',
     navLabel: 'Fauna Register',
     icon: 'flutter',
-    badge: 'WII Database'
+    badge: 'Species DB'
   },
   {
     id: 'citizen-sentinel-portal',
     srcFolder: 'biosentinel_citizen_sentinel_field_network',
     outFile: 'sentinel.html',
-    title: 'BioSentinel | Citizen Sentinel Field Network (Ganga Prahari)',
-    navLabel: 'Ganga Prahari',
+    title: 'BioSentinel | Citizen Sentinel Field Network',
+    navLabel: 'Citizen Sentinel',
     icon: 'shield_person',
     badge: 'Field Network'
   }
@@ -90,9 +90,9 @@ function generateGovHeader(activeId) {
           <span>${currentDate}</span>
         </span>
         <span class="text-slate-300">|</span>
-        <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" class="hidden md:inline font-bold text-[#026725] hover:underline">
-          भारत सरकार | Government of India
-        </a>
+        <span class="hidden md:inline font-bold text-[#026725]">
+          BioSentinel Environmental Intelligence Grid
+        </span>
       </div>
       <div class="flex items-center gap-2">
         <div class="flex items-center gap-1 border-r border-slate-300 pr-2">
@@ -106,7 +106,7 @@ function generateGovHeader(activeId) {
         </div>
         <a href="#main-content" class="hidden sm:inline font-semibold text-slate-700 hover:text-[#026725] px-1">Skip to Main Content</a>
         <span class="text-slate-300 hidden sm:inline">|</span>
-        <a href="sentinel.html" class="font-semibold text-slate-700 hover:text-[#026725]">Grievance</a>
+        <a href="sentinel.html" class="font-semibold text-slate-700 hover:text-[#026725]">Telemetry Field Network</a>
         <span class="text-slate-300">|</span>
         <span class="font-bold text-[#026725] cursor-pointer hover:underline" onclick="alert('Hindi language locale enabled across all telemetry grids.')">हिन्दी</span>
       </div>
@@ -171,7 +171,7 @@ function generateGovHeader(activeId) {
     </div>
     <div class="gov-ticker-content">
       <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
-        ★ Autonomous Telemetry Buoy Node #482 synchronized across Rishikesh, Kanpur, Varanasi, Patna and Gangasagar stretches • Basin Health Index: 78.4% (Class B+ Bathing Standards) • Real-time continuous bio-monitoring under BioSentinel Autonomous AI Protocol • Ganga Prahari Field Volunteer Network active.
+        ★ Autonomous Telemetry Buoy Node #482 synchronized across major riverine stretches • Basin Health Index: 78.4% (Class B+ Bathing Standards) • Real-time continuous bio-monitoring under BioSentinel Autonomous AI Protocol • Field Volunteer Network active.
       </marquee>
     </div>
   </div>
@@ -202,15 +202,15 @@ function generateGovFooter() {
         </p>
       </div>
 
-      <!-- Column 2: Key Stakeholders -->
+      <!-- Column 2: Platform Architecture -->
       <div class="gov-footer-col">
-        <h4>Key Stakeholders &amp; Agencies</h4>
+        <h4>Platform Architecture</h4>
         <ul>
-          <li><a href="https://nmcg.nic.in/" target="_blank" rel="noopener noreferrer">Namami Gange (NMCG)</a></li>
-          <li><a href="https://cpcb.nic.in/" target="_blank" rel="noopener noreferrer">Central Pollution Control Board (CPCB)</a></li>
-          <li><a href="https://wii.gov.in/" target="_blank" rel="noopener noreferrer">Wildlife Institute of India (WII)</a></li>
-          <li><a href="http://cwc.gov.in/" target="_blank" rel="noopener noreferrer">Central Water Commission (CWC)</a></li>
-          <li><a href="https://greentribunal.gov.in/" target="_blank" rel="noopener noreferrer">National Green Tribunal (NGT)</a></li>
+          <li><a href="overview.html">Autonomous Telemetry Grid</a></li>
+          <li><a href="gis.html">Satellite Bio-Spatial Mapping</a></li>
+          <li><a href="alerts.html">Neural Anomaly Detection</a></li>
+          <li><a href="fauna.html">Ecosystem Species Index</a></li>
+          <li><a href="sentinel.html">Field Observer Telemetry</a></li>
         </ul>
       </div>
 
@@ -222,19 +222,19 @@ function generateGovFooter() {
           <li><a href="gis.html">Live GIS &amp; Sensor Grid</a></li>
           <li><a href="alerts.html">AI Bio-Alerts &amp; Incident Triage</a></li>
           <li><a href="fauna.html">Fauna &amp; Species Register</a></li>
-          <li><a href="sentinel.html">Citizen Sentinel (Ganga Prahari)</a></li>
+          <li><a href="sentinel.html">Citizen Sentinel (Field Network)</a></li>
         </ul>
       </div>
 
-      <!-- Column 4: Policies -->
+      <!-- Column 4: Platform Information -->
       <div class="gov-footer-col">
-        <h4>Portal Policies &amp; Compliance</h4>
+        <h4>System &amp; Policies</h4>
         <ul>
-          <li><a href="https://nmcg.nic.in/rtidetails.aspx" target="_blank" rel="noopener noreferrer">Right to Information (RTI)</a></li>
-          <li><a href="https://nmcg.nic.in/ngtgrievance.aspx" target="_blank" rel="noopener noreferrer">NGT Grievance Redressal</a></li>
-          <li><a href="#">Website Policies &amp; Disclaimers</a></li>
-          <li><a href="#">Hyperlinking Policy &amp; Copyright</a></li>
-          <li><a href="#">STQC Guidelines Compliance</a></li>
+          <li><a href="overview.html">Real-Time Data Access Protocol</a></li>
+          <li><a href="gis.html">Telemetry Grid Documentation</a></li>
+          <li><a href="#">Privacy &amp; Data Security</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Sensor API Specifications</a></li>
         </ul>
       </div>
     </div>
@@ -399,6 +399,20 @@ for (const mod of modules) {
 
   // 10. Replace remote placeholder emblems with local emblems
   html = html.replace(/https:\/\/lh3\.googleusercontent\.com\/aida-embedded\/[a-zA-Z0-9_\-=]+/g, 'national_emblem.svg');
+
+  // 11. Clean up any remaining agency text in page body
+  html = html.replace(/SPCB\s*&\s*NMCG\s*Compliance\s*Dispatched/gi, 'Automated Environmental Compliance Dispatched');
+  html = html.replace(/NMCG-CAL/gi, 'BIOSENTINEL-CAL');
+  html = html.replace(/Under\s*NMCG\s*\/?\s*CPCB\s*\/?\s*WII\s*Framework[^\n<]*/gi, '');
+  html = html.replace(/Govt\.\s*of\s*India\s*Project/gi, 'BioSentinel Project');
+  html = html.replace(/CPCB-WII\s*Protocol\s*SEC-4/gi, 'BioSentinel SEC-4');
+  html = html.replace(/CPCB-WII/gi, 'BioSentinel');
+  html = html.replace(/Namami\s*Gange/gi, 'BioSentinel Riverine');
+  html = html.replace(/Ganga\s*Prahari/gi, 'Field Sentinel');
+  html = html.replace(/\bNMCG\b/g, 'BioSentinel');
+  html = html.replace(/\bCPCB\b/g, 'Central Telemetry');
+  html = html.replace(/\bWII\b/g, 'Ecological');
+  html = html.replace(/Ministry\s*of\s*Jal\s*Shakti/gi, 'National River Basin Authority');
 
   // Write destination file
   const destPath = path.join(outDir, mod.outFile);

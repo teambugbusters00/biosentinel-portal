@@ -46,7 +46,7 @@ const server = http.createServer((req, res) => {
     res.end(JSON.stringify({
       status: 'healthy',
       service: 'BioSentinel Environmental Intelligence Grid',
-      framework: 'NMCG-CPCB-WII Protocol SEC-4',
+      framework: 'BioSentinel Protocol SEC-4',
       buoysOnline: 482,
       neuralModel: 'v4.8 Active',
       timestamp: new Date().toISOString()
