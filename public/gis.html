@@ -148,11 +148,17 @@
       <span class="material-symbols-outlined text-[18px]">shield_person</span>
       <span>Citizen Sentinel</span>
     </a>
+        <button onclick="toggleAICopilot()" class="gov-nav-item bg-[#014d1c] hover:bg-emerald-800 text-emerald-200 cursor-pointer border-l border-emerald-600/40" title="Open AI Chat Assistant">
+          <span class="material-symbols-outlined text-[18px] text-emerald-300 animate-pulse">psychology</span>
+          <span>AI Chat</span>
+          <span class="text-[9px] bg-emerald-500 text-white font-bold px-1.5 py-0.5 rounded-full uppercase ml-1">Groq</span>
+        </button>
       </div>
       <div class="hidden md:flex items-center pr-4 gap-2">
-        <span class="text-[11px] font-bold bg-[#014d1c] px-3 py-1 rounded text-emerald-100 border border-emerald-500/30 uppercase tracking-wider">
-          BioSentinel Core Grid
-        </span>
+        <button onclick="toggleAICopilot()" class="flex items-center gap-1.5 text-[11px] font-bold bg-[#014d1c] hover:bg-emerald-800 px-3 py-1 rounded text-emerald-100 border border-emerald-400/40 transition-colors cursor-pointer">
+          <span class="material-symbols-outlined text-[14px] text-emerald-300">chat</span>
+          <span>AI Environmental Copilot</span>
+        </button>
       </div>
     </div>
   </nav>
@@ -171,7 +177,7 @@
   </div>
 </header>
 <!-- ================= END BIOSENTINEL HEADER ================= -->
-<main id="main-content" class="flex flex-col relative w-full max-w-7xl mx-auto pt-4 pb-20 px-3 sm:px-6 flex-1"><div class="flex flex-col w-full gap-space-md">
+<main id="main-content" class="flex flex-col relative w-full max-w-7xl mx-auto pt-3 sm:pt-4 pb-32 sm:pb-24 px-3 sm:px-6 flex-1"><div class="flex flex-col w-full gap-space-md">
 <!-- Basin Segment Chips: Horizontal Selector -->
 <div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1">
 <button class="basin-chip active shrink-0 px-space-md py-1.5 rounded-full bg-surface-container-high text-secondary flex items-center gap-1.5 shadow-sm transition-all" data-basin="middle">
@@ -531,24 +537,28 @@
       }
     });
   });
-</script></main><nav class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-slate-200 shadow-[0_-4px_16px_rgba(0,0,0,0.08)]">
-  <div class="flex justify-around items-center h-14 px-2">
-    <a class="flex flex-col items-center justify-center gap-0.5 min-h-[52px] min-w-[52px] px-1 transition-colors text-slate-600" href="overview.html">
+</script></main><nav class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur border-t border-slate-200 shadow-[0_-4px_20px_rgba(0,0,0,0.09)]">
+  <div class="flex justify-around items-center h-14 px-1 max-w-lg mx-auto">
+    <a class="flex flex-col items-center justify-center gap-0.5 min-h-[48px] min-w-[48px] px-1 transition-all text-slate-600 hover:text-[#026725]" href="overview.html">
       <span class="material-symbols-outlined text-[20px]">water_drop</span>
-      <span class="text-[10px] font-semibold text-center tracking-tight">Basin Overview</span>
-    </a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-h-[52px] min-w-[52px] px-1 transition-colors text-[#026725] font-bold border-t-2 border-[#026725]" href="gis.html">
+      <span class="text-[9px] sm:text-[10px] font-semibold text-center tracking-tight truncate max-w-[62px]">Basin Overview</span>
+    </a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-h-[48px] min-w-[48px] px-1 transition-all text-[#026725] font-bold border-t-2 border-[#026725] bg-emerald-50/50" href="gis.html">
       <span class="material-symbols-outlined text-[20px]">explore</span>
-      <span class="text-[10px] font-semibold text-center tracking-tight">Live GIS Grid</span>
-    </a><a class="flex flex-col items-center justify-center gap-0.5 min-h-[52px] min-w-[52px] px-1 transition-colors text-slate-600" href="alerts.html">
+      <span class="text-[9px] sm:text-[10px] font-semibold text-center tracking-tight truncate max-w-[62px]">Live GIS Grid</span>
+    </a><a class="flex flex-col items-center justify-center gap-0.5 min-h-[48px] min-w-[48px] px-1 transition-all text-slate-600 hover:text-[#026725]" href="alerts.html">
       <span class="material-symbols-outlined text-[20px]">crisis_alert</span>
-      <span class="text-[10px] font-semibold text-center tracking-tight">AI Bio-Alerts</span>
-    </a><a class="flex flex-col items-center justify-center gap-0.5 min-h-[52px] min-w-[52px] px-1 transition-colors text-slate-600" href="fauna.html">
+      <span class="text-[9px] sm:text-[10px] font-semibold text-center tracking-tight truncate max-w-[62px]">AI Bio-Alerts</span>
+    </a><a class="flex flex-col items-center justify-center gap-0.5 min-h-[48px] min-w-[48px] px-1 transition-all text-slate-600 hover:text-[#026725]" href="fauna.html">
       <span class="material-symbols-outlined text-[20px]">flutter</span>
-      <span class="text-[10px] font-semibold text-center tracking-tight">Fauna Register</span>
-    </a><a class="flex flex-col items-center justify-center gap-0.5 min-h-[52px] min-w-[52px] px-1 transition-colors text-slate-600" href="sentinel.html">
+      <span class="text-[9px] sm:text-[10px] font-semibold text-center tracking-tight truncate max-w-[62px]">Fauna Register</span>
+    </a><a class="flex flex-col items-center justify-center gap-0.5 min-h-[48px] min-w-[48px] px-1 transition-all text-slate-600 hover:text-[#026725]" href="sentinel.html">
       <span class="material-symbols-outlined text-[20px]">shield_person</span>
-      <span class="text-[10px] font-semibold text-center tracking-tight">Citizen Sentinel</span>
+      <span class="text-[9px] sm:text-[10px] font-semibold text-center tracking-tight truncate max-w-[62px]">Citizen Sentinel</span>
     </a>
+    <button onclick="toggleAICopilot()" class="flex flex-col items-center justify-center gap-0.5 min-h-[48px] min-w-[48px] px-1 transition-all text-[#026725] hover:text-[#014d1c]" title="AI Chat Copilot">
+      <span class="material-symbols-outlined text-[20px] text-emerald-600 animate-pulse">psychology</span>
+      <span class="text-[9px] font-bold text-center tracking-tight text-[#026725]">AI Chat</span>
+    </button>
   </div>
 </nav>
 <!-- ================= BIOSENTINEL PORTAL FOOTER ================= -->
@@ -649,5 +659,197 @@ function toggleGovContrast(isHighContrast) {
 }
 </script>
 <!-- ================= END GOVERNMENT FOOTER ================= -->
+
+
+<!-- ================= BIOSENTINEL AI COPILOT (POWERED BY GROQ / GPT-OSS 20B) ================= -->
+<div id="biosentinel-ai-container">
+  <!-- Floating Action Button -->
+  <div class="fixed z-40 bottom-16 right-3 sm:bottom-6 sm:right-6">
+    <button id="ai-copilot-btn" onclick="toggleAICopilot()" class="group flex items-center gap-2 bg-[#026725] hover:bg-[#014d1c] active:scale-95 text-white px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-full shadow-[0_4px_20px_rgba(2,103,37,0.4)] hover:shadow-2xl transition-all duration-300 border border-emerald-400/40" title="Ask BioSentinel AI Copilot">
+      <span class="material-symbols-outlined text-[20px] sm:text-[22px] text-emerald-300 animate-pulse">psychology</span>
+      <span class="font-bold text-xs tracking-wide hidden sm:inline">Ask BioSentinel AI</span>
+      <span class="inline-flex items-center justify-center bg-emerald-400 text-[#014d1c] text-[9px] font-black px-1.5 py-0.5 rounded-full uppercase tracking-wider">Groq AI</span>
+    </button>
+  </div>
+
+  <!-- AI Copilot Chat Drawer / Modal -->
+  <div id="ai-copilot-modal" class="hidden fixed inset-x-2 bottom-16 sm:inset-auto sm:bottom-20 sm:right-6 sm:w-[420px] max-h-[82vh] bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden flex flex-col z-50 transition-all duration-300">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-[#026725] to-[#014d1c] text-white px-4 py-3 flex items-center justify-between shadow-sm">
+      <div class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
+          <span class="material-symbols-outlined text-[20px] text-emerald-300">psychology</span>
+        </div>
+        <div>
+          <div class="font-bold text-sm leading-tight flex items-center gap-1.5">
+            <span>BioSentinel AI Copilot</span>
+            <span class="bg-white/15 text-emerald-200 text-[9px] px-1.5 py-0.5 rounded font-mono border border-emerald-300/30">GPT-OSS 20B</span>
+          </div>
+          <p class="text-[10px] text-emerald-100/90 font-medium">Riverine Telemetry &amp; Environmental Intelligence</p>
+        </div>
+      </div>
+      <button onclick="toggleAICopilot()" class="text-white/80 hover:text-white p-1 rounded-lg hover:bg-white/15 transition-colors" title="Close AI Copilot">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+
+    <!-- Quick Prompt Chips -->
+    <div class="bg-slate-50 px-3 py-2 border-b border-slate-200 flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+      <button onclick="sendAIChip('Analyze current water quality telemetry for Dissolved Oxygen and BOD.')" class="shrink-0 text-[11px] font-medium bg-white hover:bg-emerald-50 text-slate-700 hover:text-[#026725] px-2.5 py-1 rounded-full border border-slate-200 shadow-sm transition-colors">
+        💧 Water Health
+      </button>
+      <button onclick="sendAIChip('Triage active critical bio-alerts and recommend immediate containment.')" class="shrink-0 text-[11px] font-medium bg-white hover:bg-emerald-50 text-slate-700 hover:text-[#026725] px-2.5 py-1 rounded-full border border-slate-200 shadow-sm transition-colors">
+        🚨 Triage Alerts
+      </button>
+      <button onclick="sendAIChip('What is the conservation and population status of Gangetic Dolphins?')" class="shrink-0 text-[11px] font-medium bg-white hover:bg-emerald-50 text-slate-700 hover:text-[#026725] px-2.5 py-1 rounded-full border border-slate-200 shadow-sm transition-colors">
+        🐬 Species Health
+      </button>
+      <button onclick="sendAIChip('Guide me through how to use this page and the 5 portal modules.')" class="shrink-0 text-[11px] font-medium bg-white hover:bg-emerald-50 text-slate-700 hover:text-[#026725] px-2.5 py-1 rounded-full border border-slate-200 shadow-sm transition-colors">
+        🧭 Guide Me
+      </button>
+    </div>
+
+    <!-- Chat Messages Scroll Container -->
+    <div id="ai-chat-messages" class="flex-1 p-3.5 overflow-y-auto space-y-3 max-h-[360px] bg-slate-50/60 text-xs">
+      <div class="flex gap-2 items-start">
+        <div class="w-6 h-6 rounded-full bg-[#026725] text-white flex items-center justify-center shrink-0 text-[13px] shadow-sm">
+          <span class="material-symbols-outlined text-[14px]">psychology</span>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-xl rounded-tl-none p-2.5 text-slate-800 shadow-sm leading-relaxed max-w-[88%]">
+          👋 Hello! I am your <b>BioSentinel AI Copilot</b> (powered by Groq / GPT-OSS 20B).
+          <br/><br/>
+          I can analyze real-time telemetry across our <b>482 buoy nodes</b>, triage active bio-alerts, evaluate aquatic species vitality, or guide you through any feature on this portal. What would you like to analyze?
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Input Form -->
+    <div class="p-2.5 bg-white border-t border-slate-200">
+      <form onsubmit="submitAIChat(event)" class="flex items-center gap-2">
+        <input id="ai-user-input" type="text" placeholder="Ask AI about telemetry, alerts, species, or guidance..." class="flex-1 bg-slate-100 border border-slate-200 rounded-lg px-3 py-2 text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#026725] focus:bg-white transition-all" autocomplete="off" />
+        <button id="ai-send-btn" type="submit" class="bg-[#026725] hover:bg-[#014d1c] active:scale-95 text-white p-2 rounded-lg transition-all flex items-center justify-center shrink-0 shadow-sm" title="Send query to Groq AI">
+          <span class="material-symbols-outlined text-[18px]">send</span>
+        </button>
+      </form>
+      <div class="flex items-center justify-between mt-1 px-1 text-[10px] text-slate-400">
+        <span>Model: openai/gpt-oss-20b</span>
+        <span class="text-emerald-700 font-semibold">Groq In-Memory Inference</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleAICopilot() {
+  const modal = document.getElementById('ai-copilot-modal');
+  if (!modal) return;
+  if (modal.classList.contains('hidden')) {
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+      document.getElementById('ai-user-input')?.focus();
+    }, 100);
+  } else {
+    modal.classList.add('hidden');
+  }
+}
+
+function sendAIChip(text) {
+  const input = document.getElementById('ai-user-input');
+  if (input) {
+    input.value = text;
+    submitAIChat(new Event('submit'));
+  }
+}
+
+async function submitAIChat(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  const input = document.getElementById('ai-user-input');
+  const query = input.value.trim();
+  if (!query) return;
+
+  const messagesBox = document.getElementById('ai-chat-messages');
+
+  // Append user message bubble
+  messagesBox.innerHTML += `
+    <div class="flex gap-2 items-start justify-end">
+      <div class="bg-[#026725] text-white rounded-xl rounded-tr-none p-2.5 text-xs shadow-sm leading-relaxed max-w-[85%]">
+        ${escapeHtml(query)}
+      </div>
+    </div>
+  `;
+  input.value = '';
+  messagesBox.scrollTop = messagesBox.scrollHeight;
+
+  // Append typing indicator
+  const loadingId = 'ai-loading-' + Date.now();
+  messagesBox.innerHTML += `
+    <div id="${loadingId}" class="flex gap-2 items-start">
+      <div class="w-6 h-6 rounded-full bg-[#026725] text-white flex items-center justify-center shrink-0 text-[13px]">
+        <span class="material-symbols-outlined text-[14px]">psychology</span>
+      </div>
+      <div class="bg-white border border-slate-200 rounded-xl rounded-tl-none p-2.5 text-slate-500 shadow-sm text-xs italic flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-bounce"></span>
+        <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
+        <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full animate-bounce" style="animation-delay: 0.4s"></span>
+        <span>BioSentinel AI analyzing via Groq...</span>
+      </div>
+    </div>
+  `;
+  messagesBox.scrollTop = messagesBox.scrollHeight;
+
+  try {
+    const res = await fetch('/api/ai', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: query, context: document.title })
+    });
+    const data = await res.json();
+    document.getElementById(loadingId)?.remove();
+
+    const formatted = formatAIMarkdown(data.analysis || 'Analysis complete.');
+    messagesBox.innerHTML += `
+      <div class="flex gap-2 items-start">
+        <div class="w-6 h-6 rounded-full bg-[#026725] text-white flex items-center justify-center shrink-0 text-[13px]">
+          <span class="material-symbols-outlined text-[14px]">psychology</span>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-xl rounded-tl-none p-2.5 text-slate-800 shadow-sm leading-relaxed max-w-[88%] prose prose-xs">
+          ${formatted}
+        </div>
+      </div>
+    `;
+  } catch (err) {
+    document.getElementById(loadingId)?.remove();
+    messagesBox.innerHTML += `
+      <div class="flex gap-2 items-start">
+        <div class="w-6 h-6 rounded-full bg-red-600 text-white flex items-center justify-center shrink-0 text-[13px]">
+          <span class="material-symbols-outlined text-[14px]">error</span>
+        </div>
+        <div class="bg-red-50 border border-red-200 rounded-xl rounded-tl-none p-2.5 text-red-700 shadow-sm leading-relaxed max-w-[85%]">
+          Unable to reach AI telemetry engine. Please check internet connection.
+        </div>
+      </div>
+    `;
+  }
+  messagesBox.scrollTop = messagesBox.scrollHeight;
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.innerText = text;
+  return div.innerHTML;
+}
+
+function formatAIMarkdown(text) {
+  return text
+    .replace(/^### (.*$)/gim, '<h4 class="font-bold text-slate-900 mt-1 mb-0.5">$1</h4>')
+    .replace(/^## (.*$)/gim, '<h3 class="font-bold text-slate-900 mt-1 mb-0.5">$1</h3>')
+    .replace(/\*\*(.*?)\*\*/gim, '<b>$1</b>')
+    .replace(/\*(.*?)\*/gim, '<i>$1</i>')
+    .replace(/^\s*[-•]\s*(.*$)/gim, '<li class="ml-3 list-disc">$1</li>')
+    .replace(/\n\n/gim, '<br/><br/>')
+    .replace(/\n/gim, '<br/>');
+}
+</script>
+<!-- ================= END BIOSENTINEL AI COPILOT ================= -->
 
 </body></html>

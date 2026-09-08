@@ -20,6 +20,8 @@ services:
         value: production
       - key: PORT
         value: 10000
+      - key: GROQ_API_KEY
+        sync: false
 
   # -------------------------------------------------------------
   # Optional Service: Static Site (Global Edge CDN)
